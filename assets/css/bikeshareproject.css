@@ -50,8 +50,7 @@ body header p {
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+	display: block;}
 
 
 body {
@@ -2745,7 +2744,7 @@ input, select, textarea {
   			/* The actual popup (appears on top) */
   			.features article .inner .popup .popuptext {
 				visibility: hidden;
-				width: 370%; /*adjust here*/
+				width: 370%;
 				background-color: #555;
 				color: #fff;
 				text-align: left;
