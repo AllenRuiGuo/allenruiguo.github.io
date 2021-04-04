@@ -1734,7 +1734,7 @@ input, select, textarea {
 		}
 
 /* Container */
-/*
+
 	.container {
 		margin: 0 auto;
 		max-width: calc(100% - 4.5em);
@@ -2282,7 +2282,7 @@ input, select, textarea {
 	}
 
 /* Actions */
-/*
+
 	ul.actions {
 		display: -moz-flex;
 		display: -webkit-flex;
@@ -2402,7 +2402,7 @@ input, select, textarea {
 						}
 
 		}
-*/
+
 /* Feature Icons */
 /*
 	ul.feature-icons {
@@ -2953,13 +2953,13 @@ input, select, textarea {
 		}
 */
 /* Footer */
-/*
+
 	#footer {
-		background: #fafafa;
+		background: rgb(102, 158, 137);
 		border-top: 0;
 		color: #c0c0c0;
 		overflow: hidden;
-		padding: 4em 0 2em 0;
+		padding: 2em 0 0 0;
 	}
 
 		#footer .copyright {
@@ -2985,7 +2985,22 @@ input, select, textarea {
 				#footer .copyright li a {
 					color: inherit;
 				}
-*/
+
+/* top */
+	#top {
+		background: rgb(102, 158, 137);
+		border-top: 0;
+		color: #ffffff;
+		overflow: hidden;
+		padding: 2em 0 1em 0;
+		margin-bottom: 1em;
+	}
+
+		#top h2 {
+			color: white;
+		}
+
+
 /* XLarge */
 
 	@media screen and (max-width: 1680px) {
