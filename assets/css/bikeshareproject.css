@@ -2737,7 +2737,7 @@ input, select, textarea {
   			/* The actual popup (appears on top) */
   			.features article .inner .popup .popuptext {
 				visibility: hidden;
-				width: 450%;
+				width: 500%;
 				background-color: #555;
 				color: #fff;
 				text-align: left;
