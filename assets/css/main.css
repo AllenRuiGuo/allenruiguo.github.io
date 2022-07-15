@@ -134,6 +134,10 @@ input, select, textarea {
 		margin: 0 0 2.25em 0;
 	}
 
+	.jobtitle {
+		color: #4acaa8;
+	}
+
 	h1, h2, h3, h4, h5, h6 {
 		color: #777;
 		font-weight: 700;
@@ -238,20 +242,26 @@ input, select, textarea {
 	}
 
 	button {
-		border-color: #4CAF50;
-		background-color: inherit;		
+		border-color:#4acaa8;
+		border-radius: 4px;
+		background-color: #4acaa8;		
 		font-size: 15px;
 		cursor: pointer;
 		display: inline-block;
+		border-style: none;	
+		padding: 0;
 	  }
 		
-		button.more_details {
-			color: green;
+		button .more_details {
+			color: #fff;
+			border-bottom: none;
 		}
-	
-		button.more_details:hover {
-			background-color: #4CAF50;
-			color: white;
+
+		button:hover {
+			background-color: #fff;
+			color: #4acaa8 !important;
+			border-color: #4acaa8;
+			border-radius: 4px;
 		}
 
 /* Row */
