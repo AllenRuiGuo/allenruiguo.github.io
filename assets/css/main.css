@@ -135,7 +135,11 @@ input, select, textarea {
 	}
 
 	.jobtitle {
-		color: #4acaa8;
+		color: #fff;
+		background-color: #4acaa8;
+		border-radius: 4px;
+		padding: 2px 6px;
+		width: fit-content;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -253,16 +257,13 @@ input, select, textarea {
 	  }
 		
 		button .more_details {
-			color: #fff;
+			color: #2b9348;
 			border-bottom: none;
+			border-style: none;
+			background-color: #fff;
+			text-decoration: underline;
 		}
 
-		button:hover {
-			background-color: #fff;
-			color: #4acaa8 !important;
-			border-color: #4acaa8;
-			border-radius: 4px;
-		}
 
 /* Row */
 
