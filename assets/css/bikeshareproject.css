@@ -221,6 +221,36 @@ input, select, textarea {
 		hr.major {
 			margin: 3.375em 0;
 		}
+
+		.codeblock {
+			display: flex;
+			flex-direction: column;
+			background-color: #E7E9EB;
+			height: 300px;
+			margin-top: 8px;
+		}
+
+		.codearea {
+			display: flex;
+			flex-direction: column;
+			overflow-x: auto;
+			margin: 0px 0px 8px 16px;            
+		}
+
+		span {
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			font-size:small;
+			color:#17A2CA;
+			margin-top: 8px;
+			margin-left: 16px;
+			margin-bottom: 0px;
+		}
+
+		code {
+			font-family:"Segoe UI",Helvetica,Consolas,"courier new",Arial;
+			font-size:small;               
+		}
+
 /*
 	blockquote {
 		border-left: solid 8px #e4e4e4;

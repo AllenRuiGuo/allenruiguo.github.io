@@ -21,8 +21,61 @@
                     <a class="image"><img src="images/Bikeshareproject/Q1.jpg" alt="" /></a>
                     <div class="inner">
                         <p style="margin: 1px;">There's a similar pattern for these companies, which shows the peak bike rentals in summer season and the lowest in winter season. It might be the weather which influence people’s choice to ride a bike.</p>
+                        <div class="codeblock">
+                            <span>SQL Code</span>
+                            <div class="codearea">
+                                <code>SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, COUNT(*) AS num_of_mon</code>
+                                <code>FROM bluebikes_2016</code>
+                                <code>GROUP BY company, year, month</code>
+                                <code>UNION</code>
+                                <code>SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, COUNT(*) AS num_of_mon</code>
+                                <code>FROM bluebikes_2017</code>
+                                <code>GROUP BY company, year, month</code>
+                                <code>UNION</code>
+                                <code>SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, COUNT(*) AS num_of_mon</code>
+                                <code>FROM bluebikes_2018</code>
+                                <code>GROUP BY company, year, month</code>
+                                <code>UNION</code>
+                                <code>SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, COUNT(*) AS num_of_mon</code>
+                                <code>FROM bluebikes_2019</code>
+                                <code>GROUP BY company, year, month</code>
+                                <code>UNION</code>
+                                <code>SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, COUNT(*) AS num_of_mon</code>
+                                <code>FROM Capitalbikeshare_2016</code>
+                                <code>GROUP BY company, year, month</code>
+                                <code>UNION</code>
+                                <code>SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, COUNT(*) AS num_of_mon</code>
+                                <code>FROM Capitalbikeshare_2017</code>
+                                <code>GROUP BY company, year, month</code>
+                                <code>UNION</code>
+                                <code>SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, COUNT(*) AS num_of_mon</code>
+                                <code>FROM Capitalbikeshare_2018</code>
+                                <code>GROUP BY company, year, month</code>
+                                <code>UNION</code>
+                                <code>SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, COUNT(*) AS num_of_mon</code>
+                                <code>FROM Capitalbikeshare_2019</code>
+                                <code>GROUP BY company, year, month</code>
+                                <code>UNION</code>
+                                <code>SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, COUNT(*) AS num_of_mon</code>
+                                <code>FROM divvybikes_2016</code>
+                                <code>GROUP BY company, year, month</code>
+                                <code>UNION</code>
+                                <code>SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, COUNT(*) AS num_of_mon</code>
+                                <code>FROM divvybikes_2017</code>
+                                <code>GROUP BY company, year, month</code>
+                                <code>UNION</code>
+                                <code>SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, COUNT(*) AS num_of_mon</code>
+                                <code>FROM divvybikes_2018</code>
+                                <code>GROUP BY company, year, month</code>
+                                <code>UNION</code>
+                                <code>SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, COUNT(*) AS num_of_mon</code>
+                                <code>FROM divvybikes_2019</code>
+                                <code>GROUP BY company, year, month</code>
+                            </div>
+                        </div>
+                        <!--
                         <div class="popup" onclick="myFunction1()">SQL code
-                            <!--<span class="close">&times;</span>-->
+                            <span class="close">&times;</span>
                             <span class="popuptext" id="myPopup1">
                                 SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, COUNT(*) AS num_of_mon</br>
                                 FROM bluebikes_2016</br>
@@ -73,6 +126,7 @@
                                 GROUP BY company, year, month
                             </span>
                         </div>
+                        -->
                     </div>
                 </article>
                 <article>
@@ -80,6 +134,59 @@
                     <a class="image"><img src="images/Bikeshareproject/Q2.jpg" alt="" /></a>
                     <div class="inner">
                         <p style="margin: 0;">Bluebikes has the most growth in bike rentals, while the other two companies didn’t do well in 2018 and 2019.</p>
+                        <div class="codeblock">
+                            <span>SQL Code</span>
+                            <div class="codearea">
+                                <code>SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, COUNT(*) AS num_of_year</code>
+                                <code>FROM bluebikes_2016</code>
+                                <code>GROUP BY company, year</code>
+                                <code>UNION</code>
+                                <code>SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, COUNT(*) AS num_of_year</code>
+                                <code>FROM bluebikes_2017</code>
+                                <code>GROUP BY company, year</code>
+                                <code>UNION</code>
+                                <code>SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, COUNT(*) AS num_of_year</code>
+                                <code>FROM bluebikes_2018</code>
+                                <code>GROUP BY company, year</code>
+                                <code>UNION</code>
+                                <code>SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, COUNT(*) AS num_of_year</code>
+                                <code>FROM bluebikes_2019</code>
+                                <code>GROUP BY company, year</code>
+                                <code>UNION</code>
+                                <code>SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year, COUNT(*) AS num_of_year</code>
+                                <code>FROM Capitalbikeshare_2016</code>
+                                <code>GROUP BY company, year</code>
+                                <code>UNION</code>
+                                <code>SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year, COUNT(*) AS num_of_year</code>
+                                <code>FROM Capitalbikeshare_2017</code>
+                                <code>GROUP BY company, year</code>
+                                <code>UNION</code>
+                                <code>SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year, COUNT(*) AS num_of_year</code>
+                                <code>FROM Capitalbikeshare_2018</code>
+                                <code>GROUP BY company, year</code>
+                                <code>UNION</code>
+                                <code>SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year, COUNT(*) AS num_of_year</code>
+                                <code>FROM Capitalbikeshare_2019</code>
+                                <code>GROUP BY company, year</code>
+                                <code>UNION</code>
+                                <code>SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year, COUNT(*) AS num_of_year</code>
+                                <code>FROM divvybikes_2016</code>
+                                <code>GROUP BY company, year</code>
+                                <code>UNION</code>
+                                <code>SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year, COUNT(*) AS num_of_year</code>
+                                <code>FROM divvybikes_2017</code>
+                                <code>GROUP BY company, year</code>
+                                <code>UNION</code>
+                                <code>SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year, COUNT(*) AS num_of_year</code>
+                                <code>FROM divvybikes_2018</code>
+                                <code>GROUP BY company, year</code>
+                                <code>UNION</code>
+                                <code>SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year, COUNT(*) AS num_of_year</code>
+                                <code>FROM divvybikes_2019</code>
+                                <code>GROUP BY company, year</code>
+                            </div>
+                        </div>
+                        <!--
                         <div class="popup" onclick="myFunction2()">SQL code
                             <span class="popuptext" id="myPopup2">
                                 SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, COUNT(*) AS num_of_year</br>
@@ -131,6 +238,7 @@
                                 GROUP BY company, year</br>
                             </span>
                         </div>
+                        -->
                     </div>
                 </article>
                 <article>
@@ -138,6 +246,134 @@
                     <a class="image"><img src="images/Bikeshareproject/Q3.jpg" alt="" /></a>
                     <div class="inner">
                         <p style="margin: 0;">In general, the growth rate of holiday and workday trips has a similar trend as the total trips. Bluebikes has a greater increase in holiday activity than commuting activity in 2019. The difference between holiday activity and commuting activity for capitalbikeshare is relatively small. Divvy’s drop in 2018 is mainly caused by the decrease of holiday activity.</p>
+                        <div class="codeblock">
+                            <span>SQL Code</span>
+                            <div class="codearea">
+                                <code>
+                                WITH</br>
+                                cte_pub AS</br>
+                                (</br>
+                                SELECT * </br>
+                                FROM </br>
+                                (VALUES </br>
+                                    ('2016-01-01'::date), ('2016-01-18'), ('2016-02-15'), ('2016-05-30'), ('2016-07-04'), ('2016-09-05'), ('2016-10-10'), ('2016-11-11'), ('2016-11-24'), ('2016-12-26'),
+                                    ('2017-01-02'), ('2017-01-16'), ('2017-02-20'), ('2017-05-29'), ('2017-07-04'), ('2017-09-04'), ('2017-10-09'), ('2017-11-10'), ('2017-11-23'), ('2017-12-25'),
+                                    ('2018-01-01'), ('2018-01-15'), ('2018-02-19'), ('2018-05-28'), ('2018-07-04'), ('2018-09-03'), ('2018-10-08'), ('2018-11-12'), ('2018-11-22'), ('2018-12-25'),
+                                    ('2019-01-01'), ('2019-01-21'), ('2019-02-18'), ('2019-05-27'), ('2019-07-04'), ('2019-09-02'), ('2019-10-14'), ('2019-11-11'), ('2019-11-28'), ('2019-12-25')</br>
+                                ) AS t (public_holidays)</br>
+                                )</br>
+
+                                SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year,</br>
+                                    CASE</br>
+                                        WHEN to_date(start_time::text, 'YYYY-MM-DD') IN (SELECT * FROM cte_pub) THEN 'freedays'</br>
+                                        WHEN EXTRACT(DOW FROM start_time) = 0 OR EXTRACT(DOW FROM start_time) = 6 THEN 'freedays'</br>
+                                        ELSE 'workdays'</br>
+                                    END AS daytype, COUNT(*)</br>
+                                FROM bluebikes_2016</br>
+                                GROUP BY 1,2,3</br>
+                                UNION</br>
+                                SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year,</br>
+                                    CASE</br>
+                                        WHEN to_date(start_time::text, 'YYYY-MM-DD') IN (SELECT * FROM cte_pub) THEN 'freedays'</br>
+                                        WHEN EXTRACT(DOW FROM start_time) = 0 OR EXTRACT(DOW FROM start_time) = 6 THEN 'freedays'</br>
+                                        ELSE 'workdays'</br>
+                                    END AS daytype, COUNT(*)</br>
+                                FROM bluebikes_2017</br>
+                                GROUP BY 1,2,3</br>
+                                UNION</br>
+                                SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year,</br>
+                                    CASE</br>
+                                        WHEN to_date(start_time::text, 'YYYY-MM-DD') IN (SELECT * FROM cte_pub) THEN 'freedays'</br>
+                                        WHEN EXTRACT(DOW FROM start_time) = 0 OR EXTRACT(DOW FROM start_time) = 6 THEN 'freedays'</br>
+                                        ELSE 'workdays'</br>
+                                    END AS daytype, COUNT(*)</br>
+                                FROM bluebikes_2018</br>
+                                GROUP BY 1,2,3</br>
+                                UNION</br>
+                                SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year,</br>
+                                    CASE</br>
+                                        WHEN to_date(start_time::text, 'YYYY-MM-DD') IN (SELECT * FROM cte_pub) THEN 'freedays'</br>
+                                        WHEN EXTRACT(DOW FROM start_time) = 0 OR EXTRACT(DOW FROM start_time) = 6 THEN 'freedays'</br>
+                                        ELSE 'workdays'</br>
+                                    END AS daytype, COUNT(*)</br>
+                                FROM bluebikes_2019</br>
+                                GROUP BY 1,2,3</br>
+                                UNION</br>
+                                SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year,</br>
+                                    CASE</br>
+                                        WHEN to_date(start_time::text, 'YYYY-MM-DD') IN (SELECT * FROM cte_pub) THEN 'freedays'</br>
+                                        WHEN EXTRACT(DOW FROM start_time) = 0 OR EXTRACT(DOW FROM start_time) = 6 THEN 'freedays'</br>
+                                        ELSE 'workdays'</br>
+                                    END AS daytype, COUNT(*)</br>
+                                FROM capitalbikeshare_2016</br>
+                                GROUP BY 1,2,3</br>
+                                UNION</br>
+                                SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year,</br>
+                                    CASE</br>
+                                        WHEN to_date(start_time::text, 'YYYY-MM-DD') IN (SELECT * FROM cte_pub) THEN 'freedays'</br>
+                                        WHEN EXTRACT(DOW FROM start_time) = 0 OR EXTRACT(DOW FROM start_time) = 6 THEN 'freedays'</br>
+                                        ELSE 'workdays'</br>
+                                    END AS daytype, COUNT(*)</br>
+                                FROM capitalbikeshare_2017</br>
+                                GROUP BY 1,2,3</br>
+                                UNION</br>
+                                SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year,</br>
+                                    CASE</br>
+                                        WHEN to_date(start_time::text, 'YYYY-MM-DD') IN (SELECT * FROM cte_pub) THEN 'freedays'</br>
+                                        WHEN EXTRACT(DOW FROM start_time) = 0 OR EXTRACT(DOW FROM start_time) = 6 THEN 'freedays'</br>
+                                        ELSE 'workdays'</br>
+                                    END AS daytype, COUNT(*)</br>
+                                FROM capitalbikeshare_2018</br>
+                                GROUP BY 1,2,3</br>
+                                UNION</br>
+                                SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year,</br>
+                                    CASE</br>
+                                        WHEN to_date(start_time::text, 'YYYY-MM-DD') IN (SELECT * FROM cte_pub) THEN 'freedays'</br>
+                                        WHEN EXTRACT(DOW FROM start_time) = 0 OR EXTRACT(DOW FROM start_time) = 6 THEN 'freedays'</br>
+                                        ELSE 'workdays'</br>
+                                    END AS daytype, COUNT(*)</br>
+                                FROM capitalbikeshare_2019</br>
+                                GROUP BY 1,2,3</br>
+                                UNION</br>
+                                SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year,</br>
+                                    CASE</br>
+                                        WHEN to_date(start_time::text, 'YYYY-MM-DD') IN (SELECT * FROM cte_pub) THEN 'freedays'</br>
+                                        WHEN EXTRACT(DOW FROM start_time) = 0 OR EXTRACT(DOW FROM start_time) = 6 THEN 'freedays'</br>
+                                        ELSE 'workdays'</br>
+                                    END AS daytype, COUNT(*)</br>
+                                FROM divvybikes_2016</br>
+                                GROUP BY 1,2,3</br>
+                                UNION</br>
+                                SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year,</br>
+                                    CASE</br>
+                                        WHEN to_date(start_time::text, 'YYYY-MM-DD') IN (SELECT * FROM cte_pub) THEN 'freedays'</br>
+                                        WHEN EXTRACT(DOW FROM start_time) = 0 OR EXTRACT(DOW FROM start_time) = 6 THEN 'freedays'</br>
+                                        ELSE 'workdays'</br>
+                                    END AS daytype, COUNT(*)</br>
+                                FROM divvybikes_2017</br>
+                                GROUP BY 1,2,3</br>
+                                UNION</br>
+                                SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year,</br>
+                                    CASE</br>
+                                        WHEN to_date(start_time::text, 'YYYY-MM-DD') IN (SELECT * FROM cte_pub) THEN 'freedays'</br>
+                                        WHEN EXTRACT(DOW FROM start_time) = 0 OR EXTRACT(DOW FROM start_time) = 6 THEN 'freedays'</br>
+                                        ELSE 'workdays'</br>
+                                    END AS daytype, COUNT(*)</br>
+                                FROM divvybikes_2018</br>
+                                GROUP BY 1,2,3</br>
+                                UNION</br>
+                                SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year,</br>
+                                    CASE</br>
+                                        WHEN to_date(start_time::text, 'YYYY-MM-DD') IN (SELECT * FROM cte_pub) THEN 'freedays'</br>
+                                        WHEN EXTRACT(DOW FROM start_time) = 0 OR EXTRACT(DOW FROM start_time) = 6 THEN 'freedays'</br>
+                                        ELSE 'workdays'</br>
+                                    END AS daytype, COUNT(*)</br>
+                                FROM divvybikes_2019</br>
+                                GROUP BY 1,2,3</br>
+                                </code>
+                            </div>
+                        </div>
+                        <!--
                         <div class="popup" onclick="myFunction3()">SQL code
                             <span class="popuptext" id="myPopup3">
                                 WITH</br>
@@ -262,6 +498,7 @@
                                 GROUP BY 1,2,3</br>
                             </span>
                         </div>
+                        -->
                     </div>
                 </article>
                 <article>
@@ -273,6 +510,339 @@
                     <a class="image"><img src="images/Bikeshareproject/Q4-2.jpg" alt="" /></a>
                     <div class="inner">
                         <p style="margin: 0;">It’s interesting that in Divvy, customers contribute a very big part of longest trips than subscribers while in Bluebikes, subscribers contribute the bigger part. It can partly explain why the longest trips in Bluebikes varies a little, these trips might be made by certain subscribers.</p>    
+                        <div class="codeblock">
+                            <span>SQL Code</span>
+                            <div class="codearea">
+                                <code>
+                                SELECT 'Bluebikes' AS company, year, mon, start_station_name, end_station_name, dis, user_type</br>
+                                FROM</br>
+                                (</br>
+                                WITH</br>
+                                cte_temp_2 AS</br>
+                                (</br>
+                                WITH</br>
+                                cte_temp AS </br>
+                                (</br>
+                                SELECT b_y.start_time, bs.name AS start_station_name, bs2.name AS end_station_name,
+                                    b_y.start_station_id, bs.latitude AS start_la, bs.longtitude AS start_lo, 
+                                    b_y.end_station_id, bs2.latitude AS end_la, bs2.longtitude AS end_lo, 
+                                    b_y.user_type</br>
+                                FROM bluebikes_2016 AS b_y</br>
+                                INNER JOIN bluebikes_stations AS bs
+                                ON b_y.start_station_id = bs.id</br>
+                                INNER JOIN bluebikes_stations AS bs2
+                                ON b_y.end_station_id = bs2.id</br>
+                                )</br>
+                                SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, start_station_name, end_station_name, calculate_distance (start_la, start_lo, end_la, end_lo, 'K') AS distance, user_type</br>
+                                FROM cte_temp</br>
+                                )</br>
+                                SELECT year, mon, start_station_name, end_station_name, ROUND(distance::numeric, 2) AS dis, ROW_NUMBER() OVER (PARTITION BY mon ORDER BY distance DESC) AS ranks, user_type</br>
+                                FROM cte_temp_2</br>
+                                ) AS temp</br>
+                                WHERE ranks = 1</br>
+                                UNION</br>
+                                SELECT 'Bluebikes' AS company, year, mon, start_station_name, end_station_name, dis, user_type</br>
+                                FROM</br>
+                                (</br>
+                                WITH</br> 
+                                cte_temp_2 AS</br>
+                                (</br>
+                                WITH</br>
+                                cte_temp AS</br> 
+                                (</br>
+                                SELECT b_y.start_time, bs.name AS start_station_name, bs2.name AS end_station_name,
+                                    b_y.start_station_id, bs.latitude AS start_la, bs.longtitude AS start_lo, 
+                                    b_y.end_station_id, bs2.latitude AS end_la, bs2.longtitude AS end_lo, 
+                                    b_y.user_type</br>
+                                FROM bluebikes_2017 AS b_y</br>
+                                INNER JOIN bluebikes_stations AS bs
+                                ON b_y.start_station_id = bs.id</br>
+                                INNER JOIN bluebikes_stations AS bs2
+                                ON b_y.end_station_id = bs2.id</br>
+                                )</br>
+                                SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, start_station_name, end_station_name, calculate_distance (start_la, start_lo, end_la, end_lo, 'K') AS distance, user_type</br>
+                                FROM cte_temp</br>
+                                )</br>
+                                SELECT year, mon, start_station_name, end_station_name, ROUND(distance::numeric, 2) AS dis, ROW_NUMBER() OVER (PARTITION BY mon ORDER BY distance DESC) AS ranks, user_type</br>
+                                FROM cte_temp_2</br>
+                                ) AS temp</br>
+                                WHERE ranks = 1</br>
+                                UNION</br>
+                                SELECT 'Bluebikes' AS company, year, mon, start_station_name, end_station_name, dis, user_type</br>
+                                FROM</br>
+                                (</br>
+                                WITH</br> 
+                                cte_temp_2 AS</br>
+                                (</br>
+                                WITH</br>
+                                cte_temp AS</br> 
+                                (</br>
+                                SELECT b_y.start_time, bs.name AS start_station_name, bs2.name AS end_station_name,
+                                    b_y.start_station_id, bs.latitude AS start_la, bs.longtitude AS start_lo, 
+                                    b_y.end_station_id, bs2.latitude AS end_la, bs2.longtitude AS end_lo, 
+                                    b_y.user_type</br>
+                                FROM bluebikes_2018 AS b_y</br>
+                                INNER JOIN bluebikes_stations AS bs
+                                ON b_y.start_station_id = bs.id</br>
+                                INNER JOIN bluebikes_stations AS bs2
+                                ON b_y.end_station_id = bs2.id</br>
+                                )</br>
+                                SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, start_station_name, end_station_name, calculate_distance (start_la, start_lo, end_la, end_lo, 'K') AS distance, user_type</br>
+                                FROM cte_temp</br>
+                                )</br>
+                                SELECT year, mon, start_station_name, end_station_name, ROUND(distance::numeric, 2) AS dis, ROW_NUMBER() OVER (PARTITION BY mon ORDER BY distance DESC) AS ranks, user_type</br>
+                                FROM cte_temp_2</br>
+                                ) AS temp</br>
+                                WHERE ranks = 1</br>
+                                UNION</br>
+                                SELECT 'Bluebikes' AS company, year, mon, start_station_name, end_station_name, dis, user_type</br>
+                                FROM</br>
+                                (</br>
+                                WITH</br> 
+                                cte_temp_2 AS</br>
+                                (</br>
+                                WITH</br>
+                                cte_temp AS</br> 
+                                (</br>
+                                SELECT b_y.start_time, bs.name AS start_station_name, bs2.name AS end_station_name,
+                                    b_y.start_station_id, bs.latitude AS start_la, bs.longtitude AS start_lo, 
+                                    b_y.end_station_id, bs2.latitude AS end_la, bs2.longtitude AS end_lo, 
+                                    b_y.user_type</br>
+                                FROM bluebikes_2019 AS b_y</br>
+                                INNER JOIN bluebikes_stations AS bs
+                                ON b_y.start_station_id = bs.id</br>
+                                INNER JOIN bluebikes_stations AS bs2
+                                ON b_y.end_station_id = bs2.id</br>
+                                )</br>
+                                SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, start_station_name, end_station_name, calculate_distance (start_la, start_lo, end_la, end_lo, 'K') AS distance, user_type</br>
+                                FROM cte_temp</br>
+                                )</br>
+                                SELECT year, mon, start_station_name, end_station_name, ROUND(distance::numeric, 2) AS dis, ROW_NUMBER() OVER (PARTITION BY mon ORDER BY distance DESC) AS ranks, user_type</br>
+                                FROM cte_temp_2</br>
+                                )AS temp</br>
+                                WHERE ranks = 1</br>
+                                UNION</br>
+                                SELECT 'Capitalbikeshare' AS company, year, mon, start_station_name, end_station_name, dis, user_type</br>
+                                FROM</br>
+                                (</br>
+                                WITH</br>
+                                cte_temp_2 AS</br>
+                                (</br>
+                                WITH</br>
+                                cte_temp AS</br> 
+                                (</br>
+                                SELECT c_y.start_time, cs.name AS start_station_name, cs2.name AS end_station_name,
+                                    c_y.start_station_id, cs.latitude AS start_la, cs.longitude AS start_lo, 
+                                    c_y.end_station_id, cs2.latitude AS end_la, cs2.longitude AS end_lo, 
+                                    c_y.user_type</br>
+                                FROM capitalbikeshare_2016 AS c_y</br>
+                                INNER JOIN capitalbikeshare_stations AS cs
+                                ON c_y.start_station_id = cs.id</br>
+                                INNER JOIN capitalbikeshare_stations AS cs2
+                                ON c_y.end_station_id = cs2.id</br>
+                                )</br>
+                                SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, start_station_name, end_station_name, calculate_distance (start_la, start_lo, end_la, end_lo, 'K') AS distance, user_type</br>
+                                FROM cte_temp</br>
+                                )</br>
+                                SELECT year, mon, start_station_name, end_station_name, ROUND(distance::numeric, 2) AS dis, ROW_NUMBER() OVER (PARTITION BY mon ORDER BY distance DESC) AS ranks, user_type</br>
+                                FROM cte_temp_2</br>
+                                )AS temp</br>
+                                WHERE ranks = 1</br>
+                                UNION</br>
+                                SELECT 'Capitalbikeshare' AS company, year, mon, start_station_name, end_station_name, dis, user_type</br>
+                                FROM</br>
+                                (</br>
+                                WITH</br> 
+                                cte_temp_2 AS</br>
+                                (</br>
+                                WITH</br>
+                                cte_temp AS</br> 
+                                (</br>
+                                SELECT c_y.start_time, cs.name AS start_station_name, cs2.name AS end_station_name,
+                                    c_y.start_station_id, cs.latitude AS start_la, cs.longitude AS start_lo, 
+                                    c_y.end_station_id, cs2.latitude AS end_la, cs2.longitude AS end_lo, 
+                                    c_y.user_type</br>
+                                FROM capitalbikeshare_2017 AS c_y</br>
+                                INNER JOIN capitalbikeshare_stations AS cs
+                                ON c_y.start_station_id = cs.id</br>
+                                INNER JOIN capitalbikeshare_stations AS cs2
+                                ON c_y.end_station_id = cs2.id</br>
+                                )</br>
+                                SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, start_station_name, end_station_name, calculate_distance (start_la, start_lo, end_la, end_lo, 'K') AS distance, user_type</br>
+                                FROM cte_temp</br>
+                                )</br>
+                                SELECT year, mon, start_station_name, end_station_name, ROUND(distance::numeric, 2) AS dis, ROW_NUMBER() OVER (PARTITION BY mon ORDER BY distance DESC) AS ranks, user_type</br>
+                                FROM cte_temp_2</br>
+                                )AS temp</br>
+                                WHERE ranks = 1</br>
+                                UNION</br>
+                                SELECT 'Capitalbikeshare' AS company, year, mon, start_station_name, end_station_name, dis, user_type</br>
+                                FROM</br>
+                                (</br>
+                                WITH</br> 
+                                cte_temp_2 AS</br>
+                                (</br>
+                                WITH</br>
+                                cte_temp AS</br> 
+                                (</br>
+                                SELECT c_y.start_time, cs.name AS start_station_name, cs2.name AS end_station_name,
+                                    c_y.start_station_id, cs.latitude AS start_la, cs.longitude AS start_lo, 
+                                    c_y.end_station_id, cs2.latitude AS end_la, cs2.longitude AS end_lo, 
+                                    c_y.user_type</br>
+                                FROM capitalbikeshare_2018 AS c_y</br>
+                                INNER JOIN capitalbikeshare_stations AS cs
+                                ON c_y.start_station_id = cs.id</br>
+                                INNER JOIN capitalbikeshare_stations AS cs2
+                                ON c_y.end_station_id = cs2.id</br>
+                                )</br>
+                                SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, start_station_name, end_station_name, calculate_distance (start_la, start_lo, end_la, end_lo, 'K') AS distance, user_type</br>
+                                FROM cte_temp</br>
+                                )</br>
+                                SELECT year, mon, start_station_name, end_station_name, ROUND(distance::numeric, 2) AS dis, ROW_NUMBER() OVER (PARTITION BY mon ORDER BY distance DESC) AS ranks, user_type</br>
+                                FROM cte_temp_2</br>
+                                )AS temp</br>
+                                WHERE ranks = 1</br>
+                                UNION</br>
+                                SELECT 'Capitalbikeshare' AS company, year, mon, start_station_name, end_station_name, dis, user_type</br>
+                                FROM</br>
+                                (</br>
+                                WITH</br> 
+                                cte_temp_2 AS</br>
+                                (</br>
+                                WITH</br>
+                                cte_temp AS</br> 
+                                (</br>
+                                SELECT c_y.start_time, cs.name AS start_station_name, cs2.name AS end_station_name,
+                                    c_y.start_station_id, cs.latitude AS start_la, cs.longitude AS start_lo, 
+                                    c_y.end_station_id, cs2.latitude AS end_la, cs2.longitude AS end_lo, 
+                                    c_y.user_type</br>
+                                FROM capitalbikeshare_2019 AS c_y</br>
+                                INNER JOIN capitalbikeshare_stations AS cs
+                                ON c_y.start_station_id = cs.id</br>
+                                INNER JOIN capitalbikeshare_stations AS cs2
+                                ON c_y.end_station_id = cs2.id</br>
+                                )</br>
+                                SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, start_station_name, end_station_name, calculate_distance (start_la, start_lo, end_la, end_lo, 'K') AS distance, user_type</br>
+                                FROM cte_temp</br>
+                                )</br>
+                                SELECT year, mon, start_station_name, end_station_name, ROUND(distance::numeric, 2) AS dis, ROW_NUMBER() OVER (PARTITION BY mon ORDER BY distance DESC) AS ranks, user_type</br>
+                                FROM cte_temp_2</br>
+                                )AS temp</br>
+                                WHERE ranks = 1</br>
+                                UNION</br>
+                                SELECT 'Divvy' AS company, year, mon, start_station_name, end_station_name, dis, user_type</br>
+                                FROM</br>
+                                (</br>
+                                WITH</br> 
+                                cte_temp_2 AS</br>
+                                (</br>
+                                WITH</br>
+                                cte_temp AS</br> 
+                                (</br>
+                                SELECT d_y.start_time, ds.name AS start_station_name, ds2.name AS end_station_name,
+                                    d_y.start_station_id, ds.latitude AS start_la, ds.longitude AS start_lo, 
+                                    d_y.end_station_id, ds2.latitude AS end_la, ds2.longitude AS end_lo, 
+                                    d_y.user_type</br>
+                                FROM divvybikes_2016 AS d_y</br>
+                                INNER JOIN divvy_stations AS ds
+                                ON d_y.start_station_id = ds.id</br>
+                                INNER JOIN divvy_stations AS ds2
+                                ON d_y.end_station_id = ds2.id</br>
+                                )</br>
+                                SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, start_station_name, end_station_name, calculate_distance (start_la, start_lo, end_la, end_lo, 'K') AS distance, user_type</br>
+                                FROM cte_temp</br>
+                                )</br>
+                                SELECT year, mon, start_station_name, end_station_name, ROUND(distance::numeric, 2) AS dis, ROW_NUMBER() OVER (PARTITION BY mon ORDER BY distance DESC) AS ranks, user_type</br>
+                                FROM cte_temp_2</br>
+                                )AS temp</br>
+                                WHERE ranks = 1</br>
+                                UNION</br>
+                                SELECT 'Divvy' AS company, year, mon, start_station_name, end_station_name, dis, user_type</br>
+                                FROM</br>
+                                (</br>
+                                WITH</br> 
+                                cte_temp_2 AS</br>
+                                (</br>
+                                WITH</br>
+                                cte_temp AS</br> 
+                                (</br>
+                                SELECT d_y.start_time, ds.name AS start_station_name, ds2.name AS end_station_name,
+                                    d_y.start_station_id, ds.latitude AS start_la, ds.longitude AS start_lo, 
+                                    d_y.end_station_id, ds2.latitude AS end_la, ds2.longitude AS end_lo, 
+                                    d_y.user_type</br>
+                                FROM divvybikes_2017 AS d_y</br>
+                                INNER JOIN divvy_stations AS ds
+                                ON d_y.start_station_id = ds.id</br>
+                                INNER JOIN divvy_stations AS ds2
+                                ON d_y.end_station_id = ds2.id</br>
+                                )</br>
+                                SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, start_station_name, end_station_name, calculate_distance (start_la, start_lo, end_la, end_lo, 'K') AS distance, user_type</br>
+                                FROM cte_temp</br>
+                                )</br>
+                                SELECT year, mon, start_station_name, end_station_name, ROUND(distance::numeric, 2) AS dis, ROW_NUMBER() OVER (PARTITION BY mon ORDER BY distance DESC) AS ranks, user_type</br>
+                                FROM cte_temp_2</br>
+                                )AS temp</br>
+                                WHERE ranks = 1</br>
+                                UNION</br>
+                                SELECT 'Divvy' AS company, year, mon, start_station_name, end_station_name, dis, user_type</br>
+                                FROM</br>
+                                (</br>
+                                WITH</br> 
+                                cte_temp_2 AS</br>
+                                (</br>
+                                WITH</br>
+                                cte_temp AS</br> 
+                                (</br>
+                                SELECT d_y.start_time, ds.name AS start_station_name, ds2.name AS end_station_name,
+                                    d_y.start_station_id, ds.latitude AS start_la, ds.longitude AS start_lo, 
+                                    d_y.end_station_id, ds2.latitude AS end_la, ds2.longitude AS end_lo, 
+                                    d_y.user_type</br>
+                                FROM divvybikes_2018 AS d_y</br>
+                                INNER JOIN divvy_stations AS ds
+                                ON d_y.start_station_id = ds.id</br>
+                                INNER JOIN divvy_stations AS ds2
+                                ON d_y.end_station_id = ds2.id</br>
+                                )</br>
+                                SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, start_station_name, end_station_name, calculate_distance (start_la, start_lo, end_la, end_lo, 'K') AS distance, user_type</br>
+                                FROM cte_temp</br>
+                                )</br>
+                                SELECT year, mon, start_station_name, end_station_name, ROUND(distance::numeric, 2) AS dis, ROW_NUMBER() OVER (PARTITION BY mon ORDER BY distance DESC) AS ranks, user_type</br>
+                                FROM cte_temp_2</br>
+                                )AS temp</br>
+                                WHERE ranks = 1</br>
+                                UNION</br>
+                                SELECT 'Divvy' AS company, year, mon, start_station_name, end_station_name, dis, user_type</br>
+                                FROM</br>
+                                (</br>
+                                WITH</br> 
+                                cte_temp_2 AS</br>
+                                (</br>
+                                WITH</br>
+                                cte_temp AS</br> 
+                                (</br>
+                                SELECT d_y.start_time, ds.name AS start_station_name, ds2.name AS end_station_name,
+                                    d_y.start_station_id, ds.latitude AS start_la, ds.longitude AS start_lo, 
+                                    d_y.end_station_id, ds2.latitude AS end_la, ds2.longitude AS end_lo, 
+                                    d_y.user_type</br>
+                                FROM divvybikes_2019 AS d_y</br>
+                                INNER JOIN divvy_stations AS ds
+                                ON d_y.start_station_id = ds.id</br>
+                                INNER JOIN divvy_stations AS ds2
+                                ON d_y.end_station_id = ds2.id</br>
+                                )</br>
+                                SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, start_station_name, end_station_name, calculate_distance (start_la, start_lo, end_la, end_lo, 'K') AS distance, user_type</br>
+                                FROM cte_temp</br>
+                                )</br>
+                                SELECT year, mon, start_station_name, end_station_name, ROUND(distance::numeric, 2) AS dis, ROW_NUMBER() OVER (PARTITION BY mon ORDER BY distance DESC) AS ranks, user_type</br>
+                                FROM cte_temp_2</br>
+                                )AS temp</br>
+                                WHERE ranks = 1</br>
+                                ORDER BY 1,2,3</br>
+                                </code>
+                            </div>
+                        </div>
+
+                        <!--
                         <div class="popup" onclick="myFunction4()">SQL code
                             <span class="popuptext" id="myPopup4">
                                 SELECT 'Bluebikes' AS company, year, mon, start_station_name, end_station_name, dis, user_type</br>
@@ -601,6 +1171,7 @@
                                 ORDER BY 1,2,3</br>
                             </span>
                         </div>
+                        -->
                     </div>
                 </article>
                 <article>
@@ -608,6 +1179,99 @@
                     <a class="image"><img src="images/Bikeshareproject/Q5.jpg" alt="" /></a>
                     <div class="inner">
                         <p style="margin: 0;">Capitalbikeshare has the highest ratio and an ascendant trend, which means maybe they should increase the docks of some busy stations.</p>
+                        <div class="codeblock">
+                            <span>SQL Code</span>
+                            <div class="codearea">
+                                <code>
+                                    WITH</br>
+                                    cte_b1 AS
+                                    (SELECT bike_id, start_time, end_time, start_station_id, end_station_id, LEAD(start_station_id, 1) OVER (PARTITION BY bike_id ORDER BY bike_id, start_time, end_time) AS next_station
+                                    FROM bluebikes_2016),</br>
+                                    cte_b2 AS
+                                    (SELECT bike_id, start_time, end_time, start_station_id, end_station_id, LEAD(start_station_id, 1) OVER (PARTITION BY bike_id ORDER BY bike_id, start_time, end_time) AS next_station
+                                    FROM bluebikes_2017	),</br>
+                                    cte_b3 AS
+                                    (SELECT bike_id, start_time, end_time, start_station_id, end_station_id, LEAD(start_station_id, 1) OVER (PARTITION BY bike_id ORDER BY bike_id, start_time, end_time) AS next_station
+                                    FROM bluebikes_2018),</br>
+                                    cte_b4 AS
+                                    (SELECT bike_id, start_time, end_time, start_station_id, end_station_id, LEAD(start_station_id, 1) OVER (PARTITION BY bike_id ORDER BY bike_id, start_time, end_time) AS next_station
+                                    FROM bluebikes_2019),</br>
+                                    cte_c1 AS
+                                    (SELECT bike_id, start_time, end_time, start_station_id, end_station_id, LEAD(start_station_id, 1) OVER (PARTITION BY bike_id ORDER BY bike_id, start_time, end_time) AS next_station
+                                    FROM capitalbikeshare_2016),</br>
+                                    cte_c2 AS
+                                    (SELECT bike_id, start_time, end_time, start_station_id, end_station_id, LEAD(start_station_id, 1) OVER (PARTITION BY bike_id ORDER BY bike_id, start_time, end_time) AS next_station
+                                    FROM capitalbikeshare_2017),</br>
+                                    cte_c3 AS
+                                    (SELECT bike_id, start_time, end_time, start_station_id, end_station_id, LEAD(start_station_id, 1) OVER (PARTITION BY bike_id ORDER BY bike_id, start_time, end_time) AS next_station
+                                    FROM capitalbikeshare_2018),</br>
+                                    cte_c4 AS
+                                    (SELECT bike_id, start_time, end_time, start_station_id, end_station_id, LEAD(start_station_id, 1) OVER (PARTITION BY bike_id ORDER BY bike_id, start_time, end_time) AS next_station
+                                    FROM capitalbikeshare_2019),</br>
+                                    cte_d1 AS
+                                    (SELECT bikeid, start_time, end_time, start_station_id, end_station_id, LEAD(start_station_id, 1) OVER (PARTITION BY bikeid ORDER BY bikeid, start_time, end_time) AS next_station
+                                    FROM divvybikes_2016),</br>
+                                    cte_d2 AS
+                                    (SELECT bikeid, start_time, end_time, start_station_id, end_station_id, LEAD(start_station_id, 1) OVER (PARTITION BY bikeid ORDER BY bikeid, start_time, end_time) AS next_station
+                                    FROM divvybikes_2017),</br>
+                                    cte_d3 AS
+                                    (SELECT bikeid, start_time, end_time, start_station_id, end_station_id, LEAD(start_station_id, 1) OVER (PARTITION BY bikeid ORDER BY bikeid, start_time, end_time) AS next_station
+                                    FROM divvybikes_2018),</br>
+                                    cte_d4 AS
+                                    (SELECT bikeid, start_time, end_time, start_station_id, end_station_id, LEAD(start_station_id, 1) OVER (PARTITION BY bikeid ORDER BY bikeid, start_time, end_time) AS next_station
+                                    FROM divvybikes_2019)</br>
+                                    SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, ((SELECT COUNT(*) FROM cte_b1 WHERE end_station_id != next_station))/((SELECT COUNT(*) FROM cte_b1)-(SELECT COUNT(DISTINCT bike_id) FROM cte_b1))::numeric AS percentge_relocate</br>
+                                    FROM cte_b1</br>
+                                    GROUP BY 1,2</br>
+                                    UNION</br>
+                                    SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, ((SELECT COUNT(*) FROM cte_b2 WHERE end_station_id != next_station))/((SELECT COUNT(*) FROM cte_b2)-(SELECT COUNT(DISTINCT bike_id) FROM cte_b2))::numeric AS percentge_relocate</br>
+                                    FROM cte_b2</br>
+                                    GROUP BY 1,2</br>
+                                    UNION</br>
+                                    SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, ((SELECT COUNT(*) FROM cte_b3 WHERE end_station_id != next_station))/((SELECT COUNT(*) FROM cte_b3)-(SELECT COUNT(DISTINCT bike_id) FROM cte_b3))::numeric AS percentge_relocate</br>
+                                    FROM cte_b3</br>
+                                    GROUP BY 1,2</br>
+                                    UNION</br>
+                                    SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, ((SELECT COUNT(*) FROM cte_b4 WHERE end_station_id != next_station))/((SELECT COUNT(*) FROM cte_b4)-(SELECT COUNT(DISTINCT bike_id) FROM cte_b4))::numeric AS percentge_relocate</br>
+                                    FROM cte_b4</br>
+                                    GROUP BY 1,2</br>
+                                    UNION</br>
+                                    SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year, ((SELECT COUNT(*) FROM cte_c1 WHERE end_station_id != next_station))/((SELECT COUNT(*) FROM cte_c1)-(SELECT COUNT(DISTINCT bike_id) FROM cte_c1))::numeric AS percentge_relocate</br>
+                                    FROM cte_c1</br>
+                                    GROUP BY 1,2</br>
+                                    UNION</br>
+                                    SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year, ((SELECT COUNT(*) FROM cte_c2 WHERE end_station_id != next_station))/((SELECT COUNT(*) FROM cte_c2)-(SELECT COUNT(DISTINCT bike_id) FROM cte_c2))::numeric AS percentge_relocate</br>
+                                    FROM cte_c2</br>
+                                    GROUP BY 1,2</br>
+                                    UNION</br>
+                                    SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year, ((SELECT COUNT(*) FROM cte_c3 WHERE end_station_id != next_station))/((SELECT COUNT(*) FROM cte_c3)-(SELECT COUNT(DISTINCT bike_id) FROM cte_c3))::numeric AS percentge_relocate</br>
+                                    FROM cte_c3</br>
+                                    GROUP BY 1,2</br>
+                                    UNION</br>
+                                    SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year, ((SELECT COUNT(*) FROM cte_c4 WHERE end_station_id != next_station))/((SELECT COUNT(*) FROM cte_c4)-(SELECT COUNT(DISTINCT bike_id) FROM cte_c4))::numeric AS percentge_relocate</br>
+                                    FROM cte_c4</br>
+                                    GROUP BY 1,2</br>
+                                    UNION</br>
+                                    SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year, ((SELECT COUNT(*) FROM cte_d1 WHERE end_station_id != next_station))/((SELECT COUNT(*) FROM cte_d1)-(SELECT COUNT(DISTINCT bikeid) FROM cte_d1))::numeric AS percentge_relocate</br>
+                                    FROM cte_d1</br>
+                                    GROUP BY 1,2</br>
+                                    UNION</br>
+                                    SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year, ((SELECT COUNT(*) FROM cte_d2 WHERE end_station_id != next_station))/((SELECT COUNT(*) FROM cte_d2)-(SELECT COUNT(DISTINCT bikeid) FROM cte_d2))::numeric AS percentge_relocate</br>
+                                    FROM cte_d2</br>
+                                    GROUP BY 1,2</br>
+                                    UNION</br>
+                                    SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year, ((SELECT COUNT(*) FROM cte_d3 WHERE end_station_id != next_station))/((SELECT COUNT(*) FROM cte_d3)-(SELECT COUNT(DISTINCT bikeid) FROM cte_d3))::numeric AS percentge_relocate</br>
+                                    FROM cte_d3</br>
+                                    GROUP BY 1,2</br>
+                                    UNION</br>
+                                    SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year, ((SELECT COUNT(*) FROM cte_d4 WHERE end_station_id != next_station))/((SELECT COUNT(*) FROM cte_d4)-(SELECT COUNT(DISTINCT bikeid) FROM cte_d4))::numeric AS percentge_relocate</br>
+                                    FROM cte_d4</br>
+                                    GROUP BY 1,2</br>
+                                    ORDER BY 1,2</br>
+                                </code>
+                            </div>
+                        </div>
+                        <!--
                         <div class="popup" onclick="myFunction5()">SQL code
                             <span class="popuptext" id="myPopup5">
                                 WITH</br>
@@ -697,13 +1361,334 @@
                                 ORDER BY 1,2</br>
                             </span>
                         </div>
+                        -->
                     </div>
                 </article>
                 <article>
                     <h4>How far is a typical journey?</h4>
                     <a class="image"><img src="images/Bikeshareproject/Q6.jpg" alt="" /></a>
                     <div class="inner">
-                        <p style="margin: 0;">Subscribers and customers don’t have much difference in average distance, especially for Capitalbikeshare and Bluebikes. And the seasons has little influence on the distance of the trips. The typical journey is around 2 km.</p>
+                        <p style="margin: 0;">Subscribers and customers don’t have much difference in average distance, especially for Capitalbikeshare and Bluebikes. And the seasons has little influence on the distance of the trips. The typical journey is around 2km.</p>
+                        <div class="codeblock">
+                            <span>SQL Code</span>
+                            <div class="codearea">
+                                <code>
+                                    SELECT 'Bluebikes' AS company, year, mon, user_type, avg_dis</br>
+                                    FROM</br>
+                                    (</br>
+                                    WITH</br> 
+                                    cte_temp_2 AS</br>
+                                    (</br>
+                                    WITH</br>
+                                    cte_temp AS</br> 
+                                    (</br>
+                                    SELECT b_y.start_time, 
+                                        b_y.start_station_id, bs.latitude AS start_la, bs.longtitude AS start_lo, 
+                                        b_y.end_station_id, bs2.latitude AS end_la, bs2.longtitude AS end_lo, 
+                                        b_y.user_type</br>
+                                    FROM bluebikes_2016 AS b_y</br>
+                                    INNER JOIN bluebikes_stations AS bs
+                                    ON b_y.start_station_id = bs.id</br>
+                                    INNER JOIN bluebikes_stations AS bs2
+                                    ON b_y.end_station_id = bs2.id</br>
+                                    )</br>
+                                    SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, calculate_distance (start_la, start_lo, end_la, end_lo, 'K')::numeric AS distance, user_type</br>
+                                    FROM cte_temp</br>
+                                    )</br>
+                                    SELECT year, mon, user_type, AVG(distance) OVER (PARTITION BY mon, user_type) AS avg_dis</br>
+                                    FROM cte_temp_2</br>
+                                    ) AS temp_b1</br>
+                                    UNION</br>
+                                    SELECT 'Bluebikes' AS company, year, mon, user_type, avg_dis</br>
+                                    FROM</br>
+                                    (</br>
+                                    WITH</br> 
+                                    cte_temp_2 AS</br>
+                                    (</br>
+                                    WITH</br>
+                                    cte_temp AS</br> 
+                                    (</br>
+                                    SELECT b_y.start_time, 
+                                        b_y.start_station_id, bs.latitude AS start_la, bs.longtitude AS start_lo, 
+                                        b_y.end_station_id, bs2.latitude AS end_la, bs2.longtitude AS end_lo, 
+                                        b_y.user_type</br>
+                                    FROM bluebikes_2017 AS b_y</br>
+                                    INNER JOIN bluebikes_stations AS bs
+                                    ON b_y.start_station_id = bs.id</br>
+                                    INNER JOIN bluebikes_stations AS bs2
+                                    ON b_y.end_station_id = bs2.id</br>
+                                    )</br>
+                                    SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, calculate_distance (start_la, start_lo, end_la, end_lo, 'K')::numeric AS distance, user_type</br>
+                                    FROM cte_temp</br>
+                                    )</br>
+                                    SELECT year, mon, user_type, AVG(distance) OVER (PARTITION BY mon, user_type) AS avg_dis</br>
+                                    FROM cte_temp_2</br>
+                                    ) AS temp_b2</br>
+                                    UNION</br>
+                                    SELECT 'Bluebikes' AS company, year, mon, user_type, avg_dis</br>
+                                    FROM</br>
+                                    (</br>
+                                    WITH</br> 
+                                    cte_temp_2 AS</br>
+                                    (</br>
+                                    WITH</br>
+                                    cte_temp AS</br> 
+                                    (</br>
+                                    SELECT b_y.start_time, 
+                                        b_y.start_station_id, bs.latitude AS start_la, bs.longtitude AS start_lo, 
+                                        b_y.end_station_id, bs2.latitude AS end_la, bs2.longtitude AS end_lo, 
+                                        b_y.user_type</br>
+                                    FROM bluebikes_2018 AS b_y</br>
+                                    INNER JOIN bluebikes_stations AS bs
+                                    ON b_y.start_station_id = bs.id</br>
+                                    INNER JOIN bluebikes_stations AS bs2
+                                    ON b_y.end_station_id = bs2.id</br>
+                                    )</br>
+                                    SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, calculate_distance (start_la, start_lo, end_la, end_lo, 'K')::numeric AS distance, user_type</br>
+                                    FROM cte_temp</br>
+                                    )</br>
+                                    SELECT year, mon, user_type, AVG(distance) OVER (PARTITION BY mon, user_type) AS avg_dis</br>
+                                    FROM cte_temp_2</br>
+                                    ) AS temp_b3</br>
+                                    UNION</br>
+                                    SELECT 'Bluebikes' AS company, year, mon, user_type, avg_dis</br>
+                                    FROM</br>
+                                    (</br>
+                                    WITH</br> 
+                                    cte_temp_2 AS</br>
+                                    (</br>
+                                    WITH</br>
+                                    cte_temp AS</br> 
+                                    (</br>
+                                    SELECT b_y.start_time, 
+                                        b_y.start_station_id, bs.latitude AS start_la, bs.longtitude AS start_lo, 
+                                        b_y.end_station_id, bs2.latitude AS end_la, bs2.longtitude AS end_lo, 
+                                        b_y.user_type</br>
+                                    FROM bluebikes_2019 AS b_y</br>
+                                    INNER JOIN bluebikes_stations AS bs
+                                    ON b_y.start_station_id = bs.id</br>
+                                    INNER JOIN bluebikes_stations AS bs2
+                                    ON b_y.end_station_id = bs2.id</br>
+                                    )</br>
+                                    SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, calculate_distance (start_la, start_lo, end_la, end_lo, 'K')::numeric AS distance, user_type</br>
+                                    FROM cte_temp</br>
+                                    )</br>
+                                    SELECT year, mon, user_type, AVG(distance) OVER (PARTITION BY mon, user_type) AS avg_dis</br>
+                                    FROM cte_temp_2</br>
+                                    ) AS temp_b4</br>
+                                    UNION</br>
+                                    SELECT 'Capitalbikeshare' AS company, year, mon, user_type, avg_dis</br>
+                                    FROM</br>
+                                    (</br>
+                                    WITH</br> 
+                                    cte_temp_2 AS</br>
+                                    (</br>
+                                    WITH</br>
+                                    cte_temp AS</br> 
+                                    (</br>
+                                    SELECT b_y.start_time, 
+                                        b_y.start_station_id, bs.latitude AS start_la, bs.longitude AS start_lo, 
+                                        b_y.end_station_id, bs2.latitude AS end_la, bs2.longitude AS end_lo, 
+                                        b_y.user_type</br>
+                                    FROM capitalbikeshare_2016 AS b_y</br>
+                                    INNER JOIN capitalbikeshare_stations AS bs
+                                    ON b_y.start_station_id = bs.id</br>
+                                    INNER JOIN capitalbikeshare_stations AS bs2
+                                    ON b_y.end_station_id = bs2.id</br>
+                                    )</br>
+                                    SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, calculate_distance (start_la, start_lo, end_la, end_lo, 'K')::numeric AS distance, user_type</br>
+                                    FROM cte_temp</br>
+                                    )</br>
+                                    SELECT year, mon, user_type, AVG(distance) OVER (PARTITION BY mon, user_type) AS avg_dis</br>
+                                    FROM cte_temp_2</br>
+                                    ) AS temp_c1</br>
+                                    UNION</br>
+                                    SELECT 'Capitalbikeshare' AS company, year, mon, user_type, avg_dis</br>
+                                    FROM</br>
+                                    (</br>
+                                    WITH</br> 
+                                    cte_temp_2 AS</br>
+                                    (</br>
+                                    WITH</br>
+                                    cte_temp AS</br> 
+                                    (</br>
+                                    SELECT b_y.start_time, 
+                                        b_y.start_station_id, bs.latitude AS start_la, bs.longitude AS start_lo, 
+                                        b_y.end_station_id, bs2.latitude AS end_la, bs2.longitude AS end_lo, 
+                                        b_y.user_type</br>
+                                    FROM capitalbikeshare_2017 AS b_y</br>
+                                    INNER JOIN capitalbikeshare_stations AS bs
+                                    ON b_y.start_station_id = bs.id</br>
+                                    INNER JOIN capitalbikeshare_stations AS bs2
+                                    ON b_y.end_station_id = bs2.id</br>
+                                    )</br>
+                                    SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, calculate_distance (start_la, start_lo, end_la, end_lo, 'K')::numeric AS distance, user_type</br>
+                                    FROM cte_temp</br>
+                                    )</br>
+                                    SELECT year, mon, user_type, AVG(distance) OVER (PARTITION BY mon, user_type) AS avg_dis</br>
+                                    FROM cte_temp_2</br>
+                                    ) AS temp_c2</br>
+                                    UNION</br>
+                                    SELECT 'Capitalbikeshare' AS company, year, mon, user_type, avg_dis</br>
+                                    FROM</br>
+                                    (</br>
+                                    WITH</br> 
+                                    cte_temp_2 AS</br>
+                                    (</br>
+                                    WITH</br>
+                                    cte_temp AS</br> 
+                                    (</br>
+                                    SELECT b_y.start_time, 
+                                        b_y.start_station_id, bs.latitude AS start_la, bs.longitude AS start_lo, 
+                                        b_y.end_station_id, bs2.latitude AS end_la, bs2.longitude AS end_lo, 
+                                        b_y.user_type</br>
+                                    FROM capitalbikeshare_2018 AS b_y</br>
+                                    INNER JOIN capitalbikeshare_stations AS bs
+                                    ON b_y.start_station_id = bs.id</br>
+                                    INNER JOIN capitalbikeshare_stations AS bs2
+                                    ON b_y.end_station_id = bs2.id</br>
+                                    )</br>
+                                    SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, calculate_distance (start_la, start_lo, end_la, end_lo, 'K')::numeric AS distance, user_type</br>
+                                    FROM cte_temp</br>
+                                    )</br>
+                                    SELECT year, mon, user_type, AVG(distance) OVER (PARTITION BY mon, user_type) AS avg_dis</br>
+                                    FROM cte_temp_2</br>
+                                    ) AS temp_c3</br>
+                                    UNION</br>
+                                    SELECT 'Capitalbikeshare' AS company, year, mon, user_type, avg_dis</br>
+                                    FROM</br>
+                                    (</br>
+                                    WITH</br> 
+                                    cte_temp_2 AS</br>
+                                    (</br>
+                                    WITH</br>
+                                    cte_temp AS</br> 
+                                    (</br>
+                                    SELECT b_y.start_time, 
+                                        b_y.start_station_id, bs.latitude AS start_la, bs.longitude AS start_lo, 
+                                        b_y.end_station_id, bs2.latitude AS end_la, bs2.longitude AS end_lo, 
+                                        b_y.user_type</br>
+                                    FROM capitalbikeshare_2019 AS b_y</br>
+                                    INNER JOIN capitalbikeshare_stations AS bs
+                                    ON b_y.start_station_id = bs.id</br>
+                                    INNER JOIN capitalbikeshare_stations AS bs2
+                                    ON b_y.end_station_id = bs2.id</br>
+                                    )</br>
+                                    SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, calculate_distance (start_la, start_lo, end_la, end_lo, 'K')::numeric AS distance, user_type</br>
+                                    FROM cte_temp</br>
+                                    )</br>
+                                    SELECT year, mon, user_type, AVG(distance) OVER (PARTITION BY mon, user_type) AS avg_dis</br>
+                                    FROM cte_temp_2</br>
+                                    ) AS temp_c4</br>
+                                    UNION</br>
+                                    SELECT 'Divvy' AS company, year, mon, user_type, avg_dis</br>
+                                    FROM</br>
+                                    (</br>
+                                    WITH</br> 
+                                    cte_temp_2 AS</br>
+                                    (</br>
+                                    WITH</br>
+                                    cte_temp AS</br> 
+                                    (</br>
+                                    SELECT b_y.start_time, 
+                                        b_y.start_station_id, bs.latitude AS start_la, bs.longitude AS start_lo, 
+                                        b_y.end_station_id, bs2.latitude AS end_la, bs2.longitude AS end_lo, 
+                                        b_y.user_type</br>
+                                    FROM divvybikes_2016 AS b_y</br>
+                                    INNER JOIN divvy_stations AS bs
+                                    ON b_y.start_station_id = bs.id</br>
+                                    INNER JOIN divvy_stations AS bs2
+                                    ON b_y.end_station_id = bs2.id</br>
+                                    )</br>
+                                    SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, calculate_distance (start_la, start_lo, end_la, end_lo, 'K')::numeric AS distance, user_type</br>
+                                    FROM cte_temp</br>
+                                    )</br>
+                                    SELECT year, mon, user_type, AVG(distance) OVER (PARTITION BY mon, user_type) AS avg_dis</br>
+                                    FROM cte_temp_2</br>
+                                    ) AS temp_d1</br>
+                                    UNION</br>
+                                    SELECT 'Divvy' AS company, year, mon, user_type, avg_dis</br>
+                                    FROM</br>
+                                    (</br>
+                                    WITH</br> 
+                                    cte_temp_2 AS</br>
+                                    (</br>
+                                    WITH</br>
+                                    cte_temp AS</br> 
+                                    (</br>
+                                    SELECT b_y.start_time, 
+                                        b_y.start_station_id, bs.latitude AS start_la, bs.longitude AS start_lo, 
+                                        b_y.end_station_id, bs2.latitude AS end_la, bs2.longitude AS end_lo, 
+                                        b_y.user_type</br>
+                                    FROM divvybikes_2017 AS b_y</br>
+                                    INNER JOIN divvy_stations AS bs
+                                    ON b_y.start_station_id = bs.id</br>
+                                    INNER JOIN divvy_stations AS bs2
+                                    ON b_y.end_station_id = bs2.id</br>
+                                    )</br>
+                                    SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, calculate_distance (start_la, start_lo, end_la, end_lo, 'K')::numeric AS distance, user_type</br>
+                                    FROM cte_temp</br>
+                                    )</br>
+                                    SELECT year, mon, user_type, AVG(distance) OVER (PARTITION BY mon, user_type) AS avg_dis</br>
+                                    FROM cte_temp_2</br>
+                                    ) AS temp_d2</br>
+                                    UNION</br>
+                                    SELECT 'Divvy' AS company, year, mon, user_type, avg_dis</br>
+                                    FROM</br>
+                                    (</br>
+                                    WITH</br> 
+                                    cte_temp_2 AS</br>
+                                    (</br>
+                                    WITH</br>
+                                    cte_temp AS</br> 
+                                    (</br>
+                                    SELECT b_y.start_time, 
+                                        b_y.start_station_id, bs.latitude AS start_la, bs.longitude AS start_lo, 
+                                        b_y.end_station_id, bs2.latitude AS end_la, bs2.longitude AS end_lo, 
+                                        b_y.user_type</br>
+                                    FROM divvybikes_2018 AS b_y</br>
+                                    INNER JOIN divvy_stations AS bs
+                                    ON b_y.start_station_id = bs.id</br>
+                                    INNER JOIN divvy_stations AS bs2
+                                    ON b_y.end_station_id = bs2.id</br>
+                                    )</br>
+                                    SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, calculate_distance (start_la, start_lo, end_la, end_lo, 'K')::numeric AS distance, user_type</br>
+                                    FROM cte_temp</br>
+                                    )</br>
+                                    SELECT year, mon, user_type, AVG(distance) OVER (PARTITION BY mon, user_type) AS avg_dis</br>
+                                    FROM cte_temp_2</br>
+                                    ) AS temp_d3</br>
+                                    UNION</br>
+                                    SELECT 'Divvy' AS company, year, mon, user_type, avg_dis</br>
+                                    FROM</br>
+                                    (</br>
+                                    WITH</br> 
+                                    cte_temp_2 AS</br>
+                                    (</br>
+                                    WITH</br>
+                                    cte_temp AS</br> 
+                                    (</br>
+                                    SELECT b_y.start_time, 
+                                        b_y.start_station_id, bs.latitude AS start_la, bs.longitude AS start_lo, 
+                                        b_y.end_station_id, bs2.latitude AS end_la, bs2.longitude AS end_lo, 
+                                        b_y.user_type</br>
+                                    FROM divvybikes_2019 AS b_y</br>
+                                    INNER JOIN divvy_stations AS bs
+                                    ON b_y.start_station_id = bs.id</br>
+                                    INNER JOIN divvy_stations AS bs2
+                                    ON b_y.end_station_id = bs2.id</br>
+                                    )</br>
+                                    SELECT DATE_PART('year', start_time)::INT AS year, DATE_PART('month', start_time)::INT AS mon, calculate_distance (start_la, start_lo, end_la, end_lo, 'K')::numeric AS distance, user_type</br>
+                                    FROM cte_temp</br>
+                                    )</br>
+                                    SELECT year, mon, user_type, AVG(distance) OVER (PARTITION BY mon, user_type) AS avg_dis</br>
+                                    FROM cte_temp_2</br>
+                                    ) AS temp_d4</br>
+                                    GROUP BY 1,2,3,4,5</br>
+                                </code>
+                            </div>
+                        </div>
+                        <!--
                         <div class="popup" onclick="myFunction6()">SQL code
                             <span class="popuptext" id="myPopup6">
                                 SELECT 'Bluebikes' AS company, year, mon, user_type, avg_dis</br>
@@ -1018,9 +2003,9 @@
                                 FROM cte_temp_2</br>
                                 ) AS temp_d4</br>
                                 GROUP BY 1,2,3,4,5</br>
-
                             </span>
                         </div>
+                        -->
                     </div>
                 </article>
                 <article>
@@ -1028,6 +2013,61 @@
                     <a class="image"><img src="images/Bikeshareproject/Q7.jpg" alt="" /></a>
                     <div class="inner">
                         <p style="margin: 0;">It appears that subscribers tend to use bikes to commute because there are two peaks of bike rentals during the commuting time. Meanwhile, customers prefer to use bikes in the afternoon.</p>
+                        <div class="codeblock">
+                            <span>SQL Code</span>
+                            <div class="codearea">
+                                <code>
+                                    SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, DATE_PART('hour', start_time) as hour, user_type, COUNT(*)</br>
+                                    FROM bluebikes_2016</br>
+                                    GROUP BY 1,2,3,4</br>
+                                    UNION</br>
+                                    SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, DATE_PART('hour', start_time) as hour, user_type, COUNT(*)</br>
+                                    FROM bluebikes_2017</br>
+                                    GROUP BY 1,2,3,4</br>
+                                    UNION</br>
+                                    SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, DATE_PART('hour', start_time) as hour, user_type, COUNT(*)</br>
+                                    FROM bluebikes_2018</br>
+                                    GROUP BY 1,2,3,4</br>
+                                    UNION</br>
+                                    SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, DATE_PART('hour', start_time) as hour, user_type, COUNT(*)</br>
+                                    FROM bluebikes_2019</br>
+                                    GROUP BY 1,2,3,4</br>
+                                    UNION</br>
+                                    SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year, DATE_PART('hour', start_time) as hour, user_type, COUNT(*)</br>
+                                    FROM capitalbikeshare_2016</br>
+                                    GROUP BY 1,2,3,4</br>
+                                    UNION</br>
+                                    SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year, DATE_PART('hour', start_time) as hour, user_type, COUNT(*)</br>
+                                    FROM capitalbikeshare_2017</br>
+                                    GROUP BY 1,2,3,4</br>
+                                    UNION</br>
+                                    SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year, DATE_PART('hour', start_time) as hour, user_type, COUNT(*)</br>
+                                    FROM capitalbikeshare_2018</br>
+                                    GROUP BY 1,2,3,4</br>
+                                    UNION</br>
+                                    SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year, DATE_PART('hour', start_time) as hour, user_type, COUNT(*)</br>
+                                    FROM capitalbikeshare_2019</br>
+                                    GROUP BY 1,2,3,4</br>
+                                    UNION</br>
+                                    SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year, DATE_PART('hour', start_time) as hour, user_type, COUNT(*)</br>
+                                    FROM divvybikes_2016</br>
+                                    GROUP BY 1,2,3,4</br>
+                                    UNION</br>
+                                    SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year, DATE_PART('hour', start_time) as hour, user_type, COUNT(*)</br>
+                                    FROM divvybikes_2017</br>
+                                    GROUP BY 1,2,3,4</br>
+                                    UNION</br>
+                                    SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year, DATE_PART('hour', start_time) as hour, user_type, COUNT(*)</br>
+                                    FROM divvybikes_2018</br>
+                                    GROUP BY 1,2,3,4</br>
+                                    UNION</br>
+                                    SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year, DATE_PART('hour', start_time) as hour, user_type, COUNT(*)</br>
+                                    FROM divvybikes_2019</br>
+                                    GROUP BY 1,2,3,4</br>
+                                </code>
+                            </div>
+                        </div>
+                        <!--                        
                         <div class="popup" onclick="myFunction7()">SQL code
                             <span class="popuptext" id="myPopup7">
                                 SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, DATE_PART('hour', start_time) as hour, user_type, COUNT(*)</br>
@@ -1079,6 +2119,7 @@
                                 GROUP BY 1,2,3,4</br>
                             </span>
                         </div>
+                        -->
                     </div>
                 </article>
                 <article>
@@ -1091,6 +2132,59 @@
                                               Trips made by subscribers increased slowly in Capitalbikeshare but trips made by customers decreased. Maybe some customers turned into subscribers. </br>
                                               Trips made by subscribers and customers did not change in Divvy.
                         </p>
+                        <div class="codeblock">
+                            <span>SQL Code</span>
+                            <div class="codearea">
+                                <code>
+                                    SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, user_type, COUNT(*)</br>
+                                    FROM bluebikes_2016</br>
+                                    GROUP BY 1,2,3,4</br>
+                                    UNION</br>
+                                    SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, user_type, COUNT(*)</br>
+                                    FROM bluebikes_2017</br>
+                                    GROUP BY 1,2,3,4</br>
+                                    UNION</br>
+                                    SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, user_type, COUNT(*)</br>
+                                    FROM bluebikes_2018</br>
+                                    GROUP BY 1,2,3,4</br>
+                                    UNION</br>
+                                    SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, user_type, COUNT(*)</br>
+                                    FROM bluebikes_2019</br>
+                                    GROUP BY 1,2,3,4</br>
+                                    UNION</br>
+                                    SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, user_type, COUNT(*)</br>
+                                    FROM capitalbikeshare_2016</br>
+                                    GROUP BY 1,2,3,4</br>
+                                    UNION</br>
+                                    SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, user_type, COUNT(*)</br>
+                                    FROM capitalbikeshare_2017</br>
+                                    GROUP BY 1,2,3,4</br>
+                                    UNION</br>
+                                    SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, user_type, COUNT(*)</br>
+                                    FROM capitalbikeshare_2018</br>
+                                    GROUP BY 1,2,3,4</br>
+                                    UNION</br>
+                                    SELECT 'Capitalbikeshare' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, user_type, COUNT(*)</br>
+                                    FROM capitalbikeshare_2019</br>
+                                    GROUP BY 1,2,3,4</br>
+                                    UNION</br>
+                                    SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, user_type, COUNT(*)</br>
+                                    FROM divvybikes_2016</br>
+                                    GROUP BY 1,2,3,4</br>
+                                    UNION</br>
+                                    SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, user_type, COUNT(*)</br>
+                                    FROM divvybikes_2017</br>
+                                    GROUP BY 1,2,3,4UNION</br>
+                                    SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, user_type, COUNT(*)</br>
+                                    FROM divvybikes_2018</br>
+                                    GROUP BY 1,2,3,4UNION</br>
+                                    SELECT 'Divvy' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, user_type, COUNT(*)</br>
+                                    FROM divvybikes_2019</br>
+                                    GROUP BY 1,2,3,4</br>
+                                </code>
+                            </div>
+                        </div>
+                        <!--
                         <div class="popup" onclick="myFunction8()">SQL code
                             <span class="popuptext" id="myPopup8">
                                 SELECT 'Bluebikes' AS company, DATE_PART('year', start_time) AS year, DATE_PART('month', start_time) AS month, user_type, COUNT(*)</br>
@@ -1140,6 +2234,7 @@
                                 GROUP BY 1,2,3,4</br>
                             </span>
                         </div>
+                        -->
                     </div>
                 </article>
                 <!-- Footer -->
