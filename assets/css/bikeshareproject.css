@@ -3074,6 +3074,22 @@ input, select, textarea {
 				padding: 4em 0 2em 0;
 			}
 
+			body header p {
+				width: 70%;  /*adjust here*/
+			}
+
+			.features article h4 {
+				width: 70%;
+			}
+
+			.features article .image img {
+				width: 70%;
+			}
+
+			.features article .inner {
+				width: 70%;
+			}
+
 	}
 
 /* Large */
@@ -3098,6 +3114,22 @@ input, select, textarea {
 				padding-right: 20em;
 			}
 
+						
+			body header p {
+				width: 90%;  /*adjust here*/
+			}
+
+			.features article h4 {
+				width: 90%;
+			}
+
+			.features article .image img {
+				width: 90%;
+			}
+
+			.features article .inner {
+				width: 90%;
+			}
 	}
 
 /* Medium */
